@@ -1,50 +1,89 @@
-# React + TypeScript + Vite
+# AeroGlobe Grocery Combo Selector
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This grocery combo selector app is my implementation for the AeroGlobe's Take Home Test.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Dynamic Filtering:** Users can select any item first, and the remaining options adjust accordingly.
+- **Redux State Management:** Implements Redux for state management.
+- **Static Data Fetching:** The combo data is fetched from an external JSON resource.
+- **Unique List Rendering:** Each category (chips, drinks, chocolates) displays only unique items.
+- **Reset Selection:** Users can reset their selection at any time to start over.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- React 18
+- TypeScript
+- Redux Toolkit
+- Vite (for fast development & build process)
+- ESLint (for code linting)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installation & Running Locally
+
+### Prerequisites
+
+Ensure you have **Node.js** installed (preferably v16+).
+
+### Steps to Run the Project
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/your-repo/aeroglobe-tht-muhammad-bilal.git
+   cd aeroglobe-tht-muhammad-bilal
+   ```
+
+2. **Install dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+3. **Run the development server:**
+
+   ```sh
+   npm run dev
+   ```
+
+   The app will be available at `http://localhost:5173/` (or a different port if specified by Vite).
+
+4. **Build the project:**
+
+   ```sh
+   npm run build
+   ```
+
+   The build files will be available in the `dist/` directory.
+
+5. **Run ESLint for code quality checks:**
+
+   ```sh
+   npm run lint
+   ```
+
+## Project Structure
+
+```
+/public
+  /api
+    ├── data           # Static JSON data for combos
+/src
+  ├── components      # Reusable React components
+  ├── store          # Redux store configuration
+  /styles
+    ├── combo           # Styles for combo components.
+  ├── App.tsx        # Main application component
+  ├── main.tsx       # React entry point
+  ├── index.css      # Global styles (if any)
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## How to Use
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Select an item (Chips, Drink, or Chocolate) first.**
+2. **The remaining options will filter dynamically** based on valid combos.
+3. **Continue selecting until a full combo is made.**
+4. **The selected combo will be displayed.**
+5. **Click "Clear" to start over.**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
