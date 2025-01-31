@@ -1,10 +1,14 @@
-import React from 'react'
-import { ComboSelector } from './ComboSelector'
+import { ComboSelector } from "./ComboSelector";
 
-type Props = {}
-
-export const ComboDealWrapper = (props: Props) => {
+export const ComboDealWrapper = () => {
   return (
-    <ComboSelector/>
-  )
-}
+    <>
+      <div className="main-container">
+        <h1 className="combo-title">Create your snack combo!</h1>
+        <div className="combo-wrapper">
+          <ComboSelector />
+        </div>
+      </div>
+    </>
+  );
+};

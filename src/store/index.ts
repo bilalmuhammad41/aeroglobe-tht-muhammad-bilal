@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import comboReducer from './comboSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import comboReducer from "./comboSlice";
 
 export const store = configureStore({
   reducer: {
-    combo: comboReducer
-  }
+    combo: comboReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
