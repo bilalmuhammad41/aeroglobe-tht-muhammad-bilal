@@ -1,0 +1,85 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabs {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tab-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  pointer-events: none;
+  background: none;
+  border: solid 1px black;
+  margin-inline: 5px;
+  color: black;
+}
+
+.tab.active {
+  pointer-events: all;
+  border-bottom: 2px solid #007bff;
+  color: white;
+  background-color: black;
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.item-button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  color: black;
+}
+
+.item-button:hover {
+  background: rgb(255, 187, 0);
+  color: white;
+  border-color:  rgb(255, 187, 0);
+}
+
+.selected-combo {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.reset-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background: #0056b3;
+}
