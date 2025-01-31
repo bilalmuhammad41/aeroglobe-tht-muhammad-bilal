@@ -36,8 +36,7 @@ export const ComboSelector:React.FC = () => {
     const fetchCombos = async () => {
       dispatch(setLoading(true));
       try {
-        const response = await fetch("/api/data.json");
-        const data = await response.json();
+        const data =await import("../data/data.json");
 
         dispatch(setCombos(Array.isArray(data) ? data : data.combos));
       } catch (err) {
