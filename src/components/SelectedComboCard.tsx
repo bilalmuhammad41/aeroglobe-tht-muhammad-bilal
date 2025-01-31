@@ -1,8 +1,9 @@
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import { resetSelection, setActiveTab } from "../store/comboSlice";
 
-export const SelectedComboCard = () => {
+export const SelectedComboCard:React.FC = () => {
   const dispatch = useDispatch();
   const { selectedChips, selectedDrink, selectedChocolate } = useSelector(
     (state: RootState) => state.combo

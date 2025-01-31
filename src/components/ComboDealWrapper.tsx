@@ -1,6 +1,7 @@
+import React from "react";
 import { ComboSelector } from "./ComboSelector";
 
-export const ComboDealWrapper = () => {
+export const ComboDealWrapper:React.FC = () => {
   return (
     <>
       <div className="main-container">

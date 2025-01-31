@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setActiveTab,
@@ -11,7 +12,7 @@ import { SelectedComboCard } from "./SelectedComboCard";
 import ItemList from "./ItemList";
 import { useEffect } from "react";
 
-export const ComboSelector = () => {
+export const ComboSelector:React.FC = () => {
   const tabs: ItemType[] = ["chips", "drink", "chocolate"];
   const dispatch = useDispatch();
   const { loading, error, activeTab } = useSelector(

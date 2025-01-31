@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import { selectItem } from "../store/comboSlice";
@@ -8,7 +9,8 @@ type Props = {
   moveToNextTab: () => void;
 };
 
-export const ItemList = ({ type }: Props) => {
+export const ItemList:React.FC<Props> = ({ type }: Props) => {
+
   const dispatch = useDispatch();
   const { combos, selectedChips, selectedDrink, selectedChocolate } =
     useSelector((state: RootState) => state.combo);
