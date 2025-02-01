@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
-import { selectItem } from "../store/comboSlice";
+import { deselectItem, selectItem } from "../store/comboSlice";
 import { ItemType } from "../types";
 
 type Props = {
@@ -58,8 +58,11 @@ export const ItemList: React.FC<Props> = ({ type, moveToNextTab }: Props) => {
   const items = getAvailableItems();
 
   const handleSelect = (item: string) => {
+    if (item === selectedChips || item === selectedChocolate || item === selectedDrink){
+      dispatch(deselectItem(type))
+      return;
+    }
     dispatch(selectItem({ type, id: item }));
-    moveToNextTab();
   };
 
   const isSelected = (item: string) => {
