@@ -11,6 +11,7 @@ Live Preview: https://bilalmuhammad41.github.io/aeroglobe-tht-muhammad-bilal/
 - **Redux State Management:** Implements Redux for state management.
 - **Static Data Fetching:** The combo data is fetched from an external JSON resource.
 - **Unique List Rendering:** Each category (chips, drinks, chocolates) displays only unique items.
+- **Deselect Item:** Each item can be deselect individually.
 - **Reset Selection:** Users can reset their selection at any time to start over.
 
 ## Technologies Used
