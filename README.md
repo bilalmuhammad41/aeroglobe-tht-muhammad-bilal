@@ -4,6 +4,7 @@
 
 This grocery combo selector app is my implementation for the AeroGlobe's Take Home Test.
 
+Live Preview: https://bilalmuhammad41.github.io/aeroglobe-tht-muhammad-bilal/
 ## Features
 
 - **Dynamic Filtering:** Users can select any item first, and the remaining options adjust accordingly.
