@@ -32,7 +32,7 @@ Ensure you have **Node.js** installed (preferably v16+).
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/your-repo/aeroglobe-tht-muhammad-bilal.git
+   git clone https://github.com/bilalmuhammad41/aeroglobe-tht-muhammad-bilal.git
    cd aeroglobe-tht-muhammad-bilal
    ```
 
