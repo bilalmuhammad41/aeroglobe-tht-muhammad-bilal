@@ -62,9 +62,10 @@ export const ItemList: React.FC<Props> = ({ type }: Props) => {
     if (isSelected(item)) {
       dispatch(deselectItem(type));
       event.currentTarget.blur();
-      event.currentTarget.classList.remove('selected');
+      event.currentTarget.classList.remove('btn-selected');
       
     } else {
+      event.currentTarget.classList.add('btn-selected');
       dispatch(selectItem({ type, id: item }));
     }
   };
@@ -87,12 +88,12 @@ export const ItemList: React.FC<Props> = ({ type }: Props) => {
     buttonRefs.current.forEach(button => {
       if (button) {
         const handleMouseEnter = () => {
-          button.classList.add('selected');
+          button.classList.add('btn-hovered');
         };
 
         const handleMouseLeave = () => {
-          if (!button.classList.contains('item-button-selected')) {
-            button.classList.remove('selected');
+          if (!button.classList.contains('btn-selected')) {
+            button.classList.remove('btn-hovered');
           }
         };
 
@@ -114,7 +115,7 @@ export const ItemList: React.FC<Props> = ({ type }: Props) => {
           key={item}
           ref={el => buttonRefs.current[index] = el}
           onClick={(event) => handleSelect(item, event)}
-          className={`item-button ${isSelected(item) ? "selected" : ""}`}
+          className={`item-button ${isSelected(item) ? "btn-selected" : ""}`}
         >
           {item}
         </button>

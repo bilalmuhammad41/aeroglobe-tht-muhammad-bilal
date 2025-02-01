@@ -102,7 +102,12 @@
   outline: none;
 }
 
-.selected {
+.btn-hovered {
+  background-color: var(--clr-primary-yellow);
+  border-color: var(--clr-primary-yellow);
+  color: white;
+}
+.btn-selected {
   background-color: var(--clr-darkYellow);
   color: white;
 }
