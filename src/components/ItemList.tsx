@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import { deselectItem, selectItem } from "../store/comboSlice";
@@ -10,6 +10,7 @@ type Props = {
 };
 
 export const ItemList: React.FC<Props> = ({ type }: Props) => {
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const dispatch = useDispatch();
   const { combos, selectedChips, selectedDrink, selectedChocolate } =
     useSelector((state: RootState) => state.combo);
@@ -57,12 +58,15 @@ export const ItemList: React.FC<Props> = ({ type }: Props) => {
 
   const items = getAvailableItems();
 
-  const handleSelect = (item: string) => {
-    if (item === selectedChips || item === selectedChocolate || item === selectedDrink){
-      dispatch(deselectItem(type))
-      return;
+  const handleSelect = (item: string, event: React.MouseEvent<HTMLButtonElement>) => {
+    if (isSelected(item)) {
+      dispatch(deselectItem(type));
+      event.currentTarget.blur();
+      event.currentTarget.classList.remove('selected');
+      
+    } else {
+      dispatch(selectItem({ type, id: item }));
     }
-    dispatch(selectItem({ type, id: item }));
   };
 
   const isSelected = (item: string) => {
@@ -78,12 +82,38 @@ export const ItemList: React.FC<Props> = ({ type }: Props) => {
     }
   };
 
+  
+  useEffect(() => {
+    buttonRefs.current.forEach(button => {
+      if (button) {
+        const handleMouseEnter = () => {
+          button.classList.add('selected');
+        };
+
+        const handleMouseLeave = () => {
+          if (!button.classList.contains('item-button-selected')) {
+            button.classList.remove('selected');
+          }
+        };
+
+        button.addEventListener('mouseenter', handleMouseEnter);
+        button.addEventListener('mouseleave', handleMouseLeave);
+
+        return () => {
+          button.removeEventListener('mouseenter', handleMouseEnter);
+          button.removeEventListener('mouseleave', handleMouseLeave);
+        };
+      }
+    });
+  }, [items.length]);
+
   return (
     <div className="item-grid">
-      {items.map((item) => (
+      {items.map((item, index) => (
         <button
           key={item}
-          onClick={() => handleSelect(item)}
+          ref={el => buttonRefs.current[index] = el}
+          onClick={(event) => handleSelect(item, event)}
           className={`item-button ${isSelected(item) ? "selected" : ""}`}
         >
           {item}
@@ -94,7 +124,7 @@ export const ItemList: React.FC<Props> = ({ type }: Props) => {
         .map((item) => (
           <button
             key={item}
-            onClick={() => handleSelect(item)}
+            onClick={(event) => handleSelect(item, event)}
             className={`item-button`}
           >
             {item}

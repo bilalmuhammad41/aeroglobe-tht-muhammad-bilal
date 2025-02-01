@@ -89,25 +89,21 @@
   padding: 10px;
   border-radius: 4px;
   border: 1px solid var(--clr-darkYellow);
-  background: var(--clr-darkYellow-transparent);
+  background-color: var(--clr-darkYellow-transparent);
   color: var(--clr-darkYellow);
   width: 100%;
   max-width: 48%;
   min-width: 45%;
   cursor: pointer;
   transition: all 250ms ease;
+  outline: none;
 }
 .item-button:focus {
   outline: none;
 }
-.item-button:hover {
-  background: var(--clr-darkYellow);
-  color: white;
-  border-color: var(--clr-yellow-light);
-}
+
 .selected {
-  border: 1px solid var(--clr-darkYellow);
-  background: var(--clr-darkYellow);
+  background-color: var(--clr-darkYellow);
   color: white;
 }
 
@@ -210,4 +206,5 @@
   .item-button {
     font-size: 14px;
   }
+  
 }
