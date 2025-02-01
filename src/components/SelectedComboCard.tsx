@@ -10,10 +10,10 @@ export const SelectedComboCard:React.FC = () => {
   );
 
   if (!selectedChips && !selectedChocolate && !selectedDrink) {
-    return <div className="selected-combo-items"><span className="no-items">No Item Selected</span></div>;
+    return <div className="selected-combo"><span className="no-items">No Item Selected</span></div>;
   }
   return (
-    <div className={`selected-combo`}>
+    <div className='selected-combo'>
       <h3 className="selected-combo-title">Selected Combo</h3>
       <div className="selected-combo-items">
         {selectedChips && (

@@ -1,5 +1,6 @@
 import React from "react";
 import { ComboSelector } from "./ComboSelector";
+import { SelectedComboCard } from "./SelectedComboCard";
 
 export const ComboDealWrapper:React.FC = () => {
   return (
@@ -9,6 +10,8 @@ export const ComboDealWrapper:React.FC = () => {
         <div className="combo-wrapper">
           <ComboSelector />
         </div>
+
+      <SelectedComboCard />
       </div>
     </>
   );

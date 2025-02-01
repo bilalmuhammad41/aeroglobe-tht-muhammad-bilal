@@ -8,28 +8,19 @@
   --clr-red: rgb(197, 7, 0);
   --clr-red-transparent: rgba(197, 7, 0, 0.05);
 }
-body,
-html {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .main-container {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 550px;
 }
 .combo-wrapper {
   border: 1px solid var(--clr-gray);
-  padding: 20px 30px;
+  padding: 15px 5px;
   border-radius: 10px;
   background-color: white;
-  width: 100%;
   transition: all 200ms ease;
-  max-width: 450px;
 }
 .combo-title {
   font-size: 35px;
@@ -38,7 +29,6 @@ html {
   margin-block: 30px;
 }
 .tabs {
-  width: 100%;
   max-width: 800px;
   margin: 0 auto;
   transition: all 200ms ease;
@@ -57,7 +47,6 @@ html {
 .tab {
   padding: 10px 20px;
   cursor: pointer;
-  background: none;
   border: solid 1px var(--clr-darkGray);
   color: var(--clr-darkGray);
   background-color: white;
@@ -81,15 +70,15 @@ html {
 }
 
 .tab-content {
-  padding: 20px 0;
+  padding: 25px 0;
   min-height: 200px;
+  transition: all 66600ms ease;
 }
 
 .item-grid {
-  width: 98%;
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  display: flex;
   gap: 10px;
 }
 .tab-content .instruction {
@@ -111,38 +100,41 @@ html {
 .item-button:focus {
   outline: none;
 }
-.selected {
-  border: 1px solid var(--clr-darkYellow);
-  background: var(--clr-darkYellow);
-  color: white;
-}
 .item-button:hover {
   background: var(--clr-darkYellow);
   color: white;
   border-color: var(--clr-yellow-light);
 }
-
-.selected-combo-title {
-  font-size: 25px;
-  margin: 0;
+.selected {
+  border: 1px solid var(--clr-darkYellow);
+  background: var(--clr-darkYellow);
+  color: white;
 }
 
 .selected-combo {
   transition: all 200ms ease;
+  margin-top: 20px;
+  padding: 15px 15px;
+  border: 1px solid var(--clr-gray);
+  border-radius: 10px;
+}
+
+.selected-combo-title {
+  font-size: 18px;
+  text-align: start;
+  color: var(--clr-darkGray);
+  margin: 0;
 }
 
 .selected-combo-items {
   display: flex;
+  padding-block: 15px;
   flex-direction: column;
   background-color: white;
   text-align: left;
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
 }
 
-.selected-combo-items .no-items{
+.selected-combo-items .no-items {
   font-size: 14px;
   margin-inline: auto;
   color: var(--clr-darkGray);
@@ -154,7 +146,6 @@ html {
   margin-top: 10px;
   padding: 8px 16px;
   color: var(--clr-red);
-  margin-top: 20px;
   border: 1px solid var(--clr-red);
   border-radius: 4px;
   width: 100%;
@@ -180,45 +171,43 @@ html {
   display: none;
 }
 
-@media screen and (max-width: 600px){
-  .main-container{
+@media screen and (max-width: 600px) {
+  .main-container {
     margin-inline: auto;
   }
-  .combo-title{
+  .combo-title {
     font-size: 25px;
     margin-bottom: 20px;
   }
-  .combo-wrapper{
-    padding: 15px 10px;
+  .combo-wrapper {
+    padding: 15px 5px;
+  }
+  .tabs {
     max-width: 350px;
   }
-  .tabs{
-    max-width: 350px;
-  }
-  .tab-list{
+  .tab-list {
     padding-bottom: 14px;
-    
   }
-  .tab{
+  .tab {
     padding: 4px 14px;
     font-size: 14px;
   }
-  .tab-content{
-    padding-block: 10px;
+  .tab-content {
+    padding-block: 15px 10px;
   }
-  .selected-combo-title{
-    font-size: 20px;
+  .selected-combo-title {
+    font-size: 15px;
   }
-  .selected-combo-items{
-    margin-top: 5px;
+  .selected-combo-items {
+    margin-top: 10px;
   }
-  .selected-combo-items .no-items{
+  .selected-combo-items .no-items {
     font-size: 14px;
   }
-  .instruction{
+  .instruction {
     font-size: 14px;
   }
-  .item-button{
+  .item-button {
     font-size: 14px;
   }
 }

@@ -8,7 +8,6 @@ import {
 } from "../store/comboSlice";
 import { RootState } from "../store";
 import { ItemType } from "../types";
-import { SelectedComboCard } from "./SelectedComboCard";
 import ItemList from "./ItemList";
 import { useEffect } from "react";
 
@@ -79,7 +78,6 @@ export const ComboSelector: React.FC = () => {
           <ItemList type={activeTab} moveToNextTab={moveToNextTab} />
         </div>
       </div>
-      <SelectedComboCard />
     </>
   );
 };
