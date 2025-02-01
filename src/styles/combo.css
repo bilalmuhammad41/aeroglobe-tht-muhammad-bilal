@@ -1,10 +1,12 @@
 :root {
   --clr-gray: rgb(179, 179, 179);
   --clr-darkGray: rgb(82, 82, 82);
-  --clr-primary-yellow: rgb(255, 187, 0);
+  --clr-primary-yellow: rgb(255, 196, 0);
   --clr-yellow-light: rgb(255, 200, 48);
   --clr-darkYellow: rgb(255, 123, 0);
+  --clr-darkYellow-transparent: rgba(255, 123, 0, 0.05);
   --clr-red: rgb(197, 7, 0);
+  --clr-red-transparent: rgba(197, 7, 0, 0.05);
 }
 body,
 html {
@@ -26,7 +28,7 @@ html {
   border-radius: 10px;
   background-color: white;
   width: 100%;
-  height: 565px;
+  transition: all 200ms ease;
   max-width: 450px;
 }
 .combo-title {
@@ -69,7 +71,9 @@ html {
   border-color: black;
   background-color: #f3f3f3;
 }
-
+.tab:focus {
+  outline: none;
+}
 .tab.active {
   color: white;
   border-color: black;
@@ -82,11 +86,11 @@ html {
 }
 
 .item-grid {
+  width: 98%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  padding: 0px 20px 10px 20px;
 }
 .tab-content .instruction {
   font-weight: 500;
@@ -95,9 +99,9 @@ html {
 .item-button {
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid var(--clr-primary-yellow);
-  background: white;
-  color: var(--clr-primary-yellow);
+  border: 1px solid var(--clr-darkYellow);
+  background: var(--clr-darkYellow-transparent);
+  color: var(--clr-darkYellow);
   width: 100%;
   max-width: 48%;
   min-width: 45%;
@@ -108,12 +112,12 @@ html {
   outline: none;
 }
 .selected {
-  border: 1px solid var(--clr-primary-yellow);
-  background: var(--clr-primary-yellow);
+  border: 1px solid var(--clr-darkYellow);
+  background: var(--clr-darkYellow);
   color: white;
 }
 .item-button:hover {
-  background: var(--clr-yellow-light);
+  background: var(--clr-darkYellow);
   color: white;
   border-color: var(--clr-yellow-light);
 }
@@ -138,10 +142,17 @@ html {
   border-radius: 4px;
 }
 
+.selected-combo-items .no-items{
+  font-size: 14px;
+  margin-inline: auto;
+  color: var(--clr-darkGray);
+  font-weight: 500;
+}
+
 .reset-button {
+  background: var(--clr-red-transparent);
   margin-top: 10px;
   padding: 8px 16px;
-  background: white;
   color: var(--clr-red);
   margin-top: 20px;
   border: 1px solid var(--clr-red);
@@ -167,4 +178,47 @@ html {
   opacity: 0;
   pointer-events: none;
   display: none;
+}
+
+@media screen and (max-width: 600px){
+  .main-container{
+    margin-inline: auto;
+  }
+  .combo-title{
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .combo-wrapper{
+    padding: 15px 10px;
+    max-width: 350px;
+  }
+  .tabs{
+    max-width: 350px;
+  }
+  .tab-list{
+    padding-bottom: 14px;
+    
+  }
+  .tab{
+    padding: 4px 14px;
+    font-size: 14px;
+  }
+  .tab-content{
+    padding-block: 10px;
+  }
+  .selected-combo-title{
+    font-size: 20px;
+  }
+  .selected-combo-items{
+    margin-top: 5px;
+  }
+  .selected-combo-items .no-items{
+    font-size: 14px;
+  }
+  .instruction{
+    font-size: 14px;
+  }
+  .item-button{
+    font-size: 14px;
+  }
 }

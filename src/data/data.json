@@ -8,27 +8,177 @@
     },
     {
       "id": "2",
-      "chips": "Slims",
+      "chips": "Lays Salted",
       "drink": "7Up",
       "chocolate": "Perk"
     },
     {
       "id": "3",
-      "chips": "Potato Sticks",
-      "drink": "Pepsi",
-      "chocolate": "Now"
+      "chips": "Lays Salted",
+      "drink": "Coca-Cola",
+      "chocolate": "KitKat"
     },
     {
       "id": "4",
-      "chips": "Slanty",
-      "drink": "Miranda",
-      "chocolate": "Cadbury"
+      "chips": "Slims",
+      "drink": "7Up",
+      "chocolate": "Perk"
     },
     {
       "id": "5",
       "chips": "Slims",
       "drink": "Pepsi",
+      "chocolate": "Cadbury"
+    },
+    {
+      "id": "6",
+      "chips": "Slims",
+      "drink": "Fanta",
+      "chocolate": "Mars"
+    },
+    {
+      "id": "7",
+      "chips": "Potato Sticks",
+      "drink": "Pepsi",
+      "chocolate": "Now"
+    },
+    {
+      "id": "8",
+      "chips": "Potato Sticks",
+      "drink": "Miranda",
+      "chocolate": "Snickers"
+    },
+    {
+      "id": "9",
+      "chips": "Potato Sticks",
+      "drink": "Dew",
+      "chocolate": "Bounty"
+    },
+    {
+      "id": "10",
+      "chips": "Slanty",
+      "drink": "Miranda",
+      "chocolate": "Cadbury"
+    },
+    {
+      "id": "11",
+      "chips": "Slanty",
+      "drink": "7Up",
       "chocolate": "Perk"
+    },
+    {
+      "id": "12",
+      "chips": "Slanty",
+      "drink": "Coca-Cola",
+      "chocolate": "Twix"
+    },
+    {
+      "id": "13",
+      "chips": "Kurleez Jalapeno",
+      "drink": "Pepsi",
+      "chocolate": "KitKat"
+    },
+    {
+      "id": "14",
+      "chips": "Kurleez Jalapeno",
+      "drink": "Fanta",
+      "chocolate": "Dairy Milk"
+    },
+    {
+      "id": "15",
+      "chips": "Kurleez Jalapeno",
+      "drink": "Dew",
+      "chocolate": "Mars"
+    },
+    {
+      "id": "16",
+      "chips": "Lays Masala",
+      "drink": "Fanta",
+      "chocolate": "Bounty"
+    },
+    {
+      "id": "17",
+      "chips": "Lays Masala",
+      "drink": "Pepsi",
+      "chocolate": "Snickers"
+    },
+    {
+      "id": "18",
+      "chips": "Lays Masala",
+      "drink": "7Up",
+      "chocolate": "Toblerone"
+    },
+    {
+      "id": "19",
+      "chips": "Cheetos Hot",
+      "drink": "Sprite",
+      "chocolate": "Snickers"
+    },
+    {
+      "id": "20",
+      "chips": "Cheetos Hot",
+      "drink": "Dew",
+      "chocolate": "Galaxy"
+    },
+    {
+      "id": "21",
+      "chips": "Cheetos Hot",
+      "drink": "Coca-Cola",
+      "chocolate": "Lindt"
+    },
+    {
+      "id": "22",
+      "chips": "Kurkure",
+      "drink": "Mountain Dew",
+      "chocolate": "Toblerone"
+    },
+    {
+      "id": "23",
+      "chips": "Kurkure",
+      "drink": "7Up",
+      "chocolate": "Twix"
+    },
+    {
+      "id": "24",
+      "chips": "Kurkure",
+      "drink": "Pepsi",
+      "chocolate": "Dairy Milk"
+    },
+    {
+      "id": "25",
+      "chips": "Lays Cheese",
+      "drink": "Pepsi",
+      "chocolate": "Dairy Milk"
+    },
+    {
+      "id": "26",
+      "chips": "Lays Cheese",
+      "drink": "Miranda",
+      "chocolate": "KitKat Chunky"
+    },
+    {
+      "id": "27",
+      "chips": "Lays Cheese",
+      "drink": "Fanta",
+      "chocolate": "Galaxy"
+    },
+    {
+      "id": "28",
+      "chips": "Oye Hoye",
+      "drink": "Coca-Cola",
+      "chocolate": "Lindt"
+    },
+    {
+      "id": "29",
+      "chips": "Oye Hoye",
+      "drink": "7Up",
+      "chocolate": "Snickers"
+    },
+    {
+      "id": "30",
+      "chips": "Oye Hoye",
+      "drink": "Mountain Dew",
+      "chocolate": "Bounty"
     }
   ]
 }

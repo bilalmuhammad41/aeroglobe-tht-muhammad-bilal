@@ -12,7 +12,7 @@ import { SelectedComboCard } from "./SelectedComboCard";
 import ItemList from "./ItemList";
 import { useEffect } from "react";
 
-export const ComboSelector:React.FC = () => {
+export const ComboSelector: React.FC = () => {
   const tabs: ItemType[] = ["chips", "drink", "chocolate"];
   const dispatch = useDispatch();
   const { loading, error, activeTab } = useSelector(
@@ -36,7 +36,7 @@ export const ComboSelector:React.FC = () => {
     const fetchCombos = async () => {
       dispatch(setLoading(true));
       try {
-        const data =await import("../data/data.json");
+        const data = await import("../data/data.json");
 
         dispatch(setCombos(Array.isArray(data) ? data : data.combos));
       } catch (err) {

@@ -49,19 +49,6 @@ const comboSlice = createSlice({
           break;
       }
     },
-    deselectItem: (state, action: PayloadAction<ItemType>) => {
-      switch (action.payload) {
-        case "chips":
-          state.selectedChips = undefined;
-          break;
-        case "drink":
-          state.selectedDrink = undefined;
-          break;
-        case "chocolate":
-          state.selectedChocolate = undefined;
-          break;
-      }
-    },
     setActiveTab: (state, action: PayloadAction<ItemType>) => {
       state.activeTab = action.payload;
     },
@@ -78,7 +65,6 @@ export const {
   setLoading,
   setError,
   selectItem,
-  deselectItem,
   setActiveTab,
   resetSelection,
 } = comboSlice.actions;

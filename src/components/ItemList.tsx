@@ -9,8 +9,7 @@ type Props = {
   moveToNextTab: () => void;
 };
 
-export const ItemList:React.FC<Props> = ({ type }: Props) => {
-
+export const ItemList: React.FC<Props> = ({ type, moveToNextTab }: Props) => {
   const dispatch = useDispatch();
   const { combos, selectedChips, selectedDrink, selectedChocolate } =
     useSelector((state: RootState) => state.combo);
@@ -60,6 +59,7 @@ export const ItemList:React.FC<Props> = ({ type }: Props) => {
 
   const handleSelect = (item: string) => {
     dispatch(selectItem({ type, id: item }));
+    moveToNextTab();
   };
 
   const isSelected = (item: string) => {
